@@ -1,9 +1,44 @@
 <html>
     <head>
-       <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="index.css">
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
+
     </head>
     <body>
-	<script src="index.js"></script>
+        <header>
+            <div class="header-text">
+                <h1>Jimmy's Diner</h1>
+                <h2>The best burgers and pizza in town.</h2>
+            </div>
+        </header>
+        <main>
+            <div class="menu-items" id="menu-items">
+            </div>
+            <div class="summaryContainer" id="order-container">
+                <div class="order-summary" id="order-summary">
+                </div>
+                <button class="orderBtn" id="orderBtn">Complete order</button>
+            </div>
+        </main>
+        
+        <div class="payment-modal" id="payment-modal">
+            <form>
+                <p class="modal-title">Enter card details</p>
+                <input required type="text" id="name" name="name" placeholder="Enter your name">
+                <input required type="tel" id="credit-card" inputmode="numeric" pattern="[0-9\s]{13,19}" maxlength="16" name="credit-card" placeholder="Enter card number">
+                <input required type="tel" id="cvv" inputmode="numeric" name="cvv" maxlength="3" pattern="([0-9]|[0-9]|[0-9])" placeholder="Enter CVV">
+                <input type="submit" value="Pay" name="pay" id="payBtn" class="payBtn"> 
+            </form>
+        </div>
+        
+        <div class="thankYou-message" id="thankYou-message">
+            <p class="thankYou">Thanks, <span id="customer-name"></span>! Your order is on its way!</p>
+        </div>
+	<script src="index.js" type="module"></script>
     </body>
 </html>
 
